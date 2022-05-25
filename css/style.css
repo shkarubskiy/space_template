@@ -1,0 +1,760 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul, ol, li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html, body {
+  height: 100%;
+  line-height: 1;
+}
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex: 1 1 auto;
+}
+body {
+  background-color: #0C033A;
+  color: white;
+}
+
+/* BLOCKS ======================================= */
+.container {
+  margin: 0 auto;
+  padding: 0 calc(135 * 100vw / 1441);
+  width: 100%;
+}
+.image {
+  width: 100%;
+}
+.title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: calc(100 * 100vw / 1441);
+  padding-bottom: calc(50 * 100vw / 1441);
+}
+.title-small {
+  font-family: 'Bebas Neue', cursive;
+  font-size: calc(80 * 100vw / 1441);
+  padding-bottom: calc(50 * 100vw / 1441);
+}
+.title-gradient {
+  background: linear-gradient(99.41deg, #FFB018 -12.63%, #FF2900 84.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(18 * 100vw / 1441);
+  font-weight: 400;
+  line-height: calc(30 * 100vw / 1441);
+  padding-bottom: calc(50 * 100vw / 1441);
+  width: calc(508 * 100vw / 1441);
+}
+.button, .button-big {
+  background: linear-gradient(99.41deg, #FFB018 -12.63%, #FF2900 84.78%);
+  width: calc(168 * 100vw / 1441);
+  height: calc(58 * 100vw / 1441);
+  border-radius: calc(28 * 100vw / 1441);
+  border: solid calc(2 * 100vw / 1441) white;
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(18 * 100vw / 1441);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 calc(25 * 100vw / 1441);
+}
+.button-big {
+  width: calc(279 * 100vw / 1441);
+  height: calc(78 * 100vw / 1441);
+  border-radius: calc(38 * 100vw / 1441);
+  font-size: calc(24 * 100vw / 1441);
+  padding: 0 calc(35 * 100vw / 1441);
+}
+.button__arrow {
+  width: calc(18 * 100vw / 1441);
+}
+.button__arrow-big {
+  width: calc(24 * 100vw / 1441);
+}
+.decor {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width : 767px) {
+  .container {
+    height: auto;
+  }
+  .title {
+    font-size: calc(66 * 100vw / 375);
+    padding-bottom: calc(399 * 100vw / 375);
+  }
+  .title-small {
+    font-size: calc(66 * 100vw / 375);
+    padding-bottom: calc(31 * 100vw / 375);
+  }
+  .text {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(18 * 100vw / 375);
+    font-weight: 400;
+    line-height: calc(30 * 100vw / 375);
+    padding-bottom: calc(50 * 100vw / 375);
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+    height: calc(60 * 100vw / 375);
+    border-radius: calc(30 * 100vw / 375);
+    font-size: calc(18 * 100vw / 375);
+    padding: 0 calc(30 * 100vw / 375);
+  }
+  .button-big {
+    width: 100%;
+    height: calc(60 * 100vw / 375);
+    border-radius: calc(30 * 100vw / 375);
+    font-size: calc(18 * 100vw / 375);
+    padding: 0 calc(30 * 100vw / 375);
+  }
+  .button__arrow {
+    width: calc(24 * 100vw / 375);
+  }
+  .button__arrow-big {
+    width: calc(24 * 100vw / 375);
+  }
+}
+
+/* HEADER ====================================== */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-top: calc(25 * 100vw / 1441);
+}
+.header__logo {
+  width: calc(139 * 100vw / 1441);
+}
+.header__nav {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(24 * 100vw / 1441);
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  color: inherit;
+  padding: 0 calc(15 * 100vw / 1441);;;
+}
+.nav__item:hover {
+  color: #FF5A09;
+}
+.header__menu {
+  width: calc(23 * 100vw / 1441);
+}
+
+@media (max-width : 767px) {
+  .header__container {
+    padding-top: calc(30 * 100vw / 375);
+    height: calc(60 * 100vw / 375);
+  }
+  .header__logo {
+    width: calc(103 * 100vw / 375);
+    height: calc(30 * 100vw / 375);
+  }
+  .logo__image {
+    height: 100%;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__menu {
+    width: calc(35 * 100vw / 375);
+  }
+}
+
+/* START ========================================= */
+.start {
+  background-image: url(/img/start/background.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.start__container {
+  padding-top: calc(236 * 100vw / 1441);
+  padding-bottom: calc(236 * 100vw / 1441);
+}
+
+@media (max-width : 767px) {
+  .start {
+    background-size: auto 100vw;
+    background-position:  100% 60%;
+  }
+  .start__container {
+    padding-top: calc(93 * 100vw / 375);
+    padding-bottom: calc(50 * 100vw / 375);
+  }
+}
+
+/* CONTACT ========================================== */
+.contact {
+  position: relative;
+}
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: calc(50 * 100vw / 375);
+}
+.contact__image {
+  background-image: url(/img/contact/image.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(605 * 100vw / 1441);
+  height: calc(744 * 100vw / 1441);
+}
+.contact__block {
+  width: calc(505 * 100vw / 1441);
+}
+.contact__decor-planet {
+  background-image: url(/img/contact/decor-planet.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(160 * 100vw / 1441);
+  height: calc(160 * 100vw / 1441);
+  top: calc(130 * 100vw / 1441);
+  left: calc(150 * 100vw / 1441);
+}
+.contact__decor-stars {
+  background-image: url(/img/contact/decor-stars.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(524 * 100vw / 1441);
+  height: calc(305 * 100vw / 1441);
+  top: calc(280 * 100vw / 1441);
+  right: calc(-90 * 100vw / 1441);
+  z-index: -2;
+}
+.contact__decor-rocket {
+  background-image: url(/img/contact/decor-rocket.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(456 * 100vw / 1441);
+  height: calc(305 * 100vw / 1441);
+  top: 0;
+  right: calc(-150 * 100vw / 1441);
+}
+.contact__decor-wave {
+  background-image: url(/img/contact/decor-wave.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(857 * 100vw / 1441);
+  height: calc(559 * 100vw / 1441);
+  top: calc(-60 * 100vw / 1441);
+  left: calc(-100 * 100vw / 1441);
+}
+
+@media (max-width : 767px) {
+  .contact__container {
+    display: block;
+    background-image: url(/img/contact/image.png);
+    background-size: auto 100vw;
+    background-position:  center center;
+    background-repeat: no-repeat;
+  }
+  .contact__image {
+    display: none;
+  }
+  .contact__block {
+    width: 100%;
+  }
+  .contact__decor-planet {
+    display: none;
+  }
+  .contact__decor-stars {
+    width: calc(524 * 100vw / 375);
+    height: calc(305 * 100vw / 375);
+    top: calc(90 * 100vw / 375);
+    right: calc(-90 * 100vw / 375);
+    z-index: -2;
+  }
+  .contact__decor-rocket {
+    display: none;
+  }
+  .contact__decor-wave {
+    width: calc(857 * 100vw / 375);
+    height: calc(559 * 100vw / 375);
+    top: calc(-60 * 100vw / 375);
+    left: calc(-100 * 100vw / 375);
+  }
+}
+
+/* PLANETS =========================================== */
+.planets {
+  position: relative;
+}
+.planets__title {
+  font-size: calc(55 * 100vw / 1441);
+  text-align: center;
+  padding-bottom: calc(50 * 100vw / 1441);
+}
+.planets__decor-wave {
+  background-image: url(/img/planets/decor-wave.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(857 * 100vw / 1441);
+  height: calc(559 * 100vw / 1441);
+  top: calc(60 * 100vw / 1441);
+  right: calc(-130 * 100vw / 1441);
+}
+.planets__decor-stars {
+  background-image: url(/img/planets/decor-stars.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(524 * 100vw / 1441);
+  height: calc(305 * 100vw / 1441);
+  top: calc(240 * 100vw / 1441);
+  left: calc(-90 * 100vw / 1441);
+}
+.planets__select {
+  display: flex;
+  justify-content: space-between;
+  height: calc(556 * 100vw / 1441);
+}
+.planet {
+  width: calc(352 * 100vw / 1441);
+  height: calc(520 * 100vw / 1441);
+  background: linear-gradient(180deg, rgba(38, 1, 83, 0) 14.62%, #250153 100%);
+  border-radius: calc(20 * 100vw / 1441);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(25 * 100vw / 1441);
+
+  -webkit-transition: width 100ms linear;
+  -ms-transition: width 100ms linear;
+  transition: width 100ms linear;
+}
+.planet:hover {
+  background: linear-gradient(180deg, rgba(255, 7, 114, 0) 12.91%, #FF5A09 88.32%);
+  width: calc(420 * 100vw / 1441);
+  height: calc(556 * 100vw / 1441);
+}
+.planet__image {
+  width: 80%;
+  padding-bottom: calc(50 * 100vw / 1441);
+}
+.planet__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.planet__name {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(30 * 100vw / 1441);
+  padding-bottom: calc(10 * 100vw / 1441);
+}
+.planet__decor {
+  width: calc(40 * 100vw / 1441);
+  height: calc(2 * 100vw / 1441);
+  border-radius: calc(1 * 100vw / 1441);
+  background: linear-gradient(99.41deg, #FFB018 -12.63%, #FF2900 84.78%);
+}
+.planet:hover .planet__decor {
+  background: white;
+}
+.planet__theme {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(34 * 100vw / 1441);
+  padding-top: calc(6 * 100vw / 1441);
+}
+
+@media (max-width : 767px) {
+  .planets {
+    height: auto;
+  }
+  .planets__title {
+    font-size: calc(55 * 100vw / 375);
+    text-align: left;
+  }
+  .planets__decor-wave {
+    display: none;
+  }
+  .planets__decor-stars {
+    width: calc(524 * 100vw / 375);
+    height: calc(305 * 100vw / 375);
+    top: calc(240 * 100vw / 375);
+    left: calc(-90 * 100vw / 375);
+  }
+  .planets__select {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(610 * 100vw / 375);
+    padding-bottom: calc(50 * 100vw / 375);
+  }
+  .planet {
+    background: linear-gradient(90deg, rgba(38, 1, 83, 0) 14.62%, #250153 100%);
+    width: 95%;
+    height: calc(175 * 100vw / 375);
+    border-radius: calc(20 * 100vw / 375);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(25 * 100vw / 375);
+  }
+  .planet:hover {
+    background: linear-gradient(90deg, rgba(255, 7, 114, 0) 12.91%, #FF5A09 88.32%);
+    width: 100%;
+    height: calc(180 * 100vw / 375);
+  }
+  .planet__image {
+    height: 90%;
+    width: auto;
+    padding-bottom: 0;
+  }
+  .planet:hover .planet__image {
+    height: 100%;
+  }
+  .planet__name {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(20 * 100vw / 375);
+    padding-bottom: calc(10 * 100vw / 375);
+  }
+  .planet__decor {
+    width: calc(40 * 100vw / 375);
+    height: calc(2 * 100vw / 375);
+    border-radius: calc(1 * 100vw / 375);
+    background-color: white;
+  }
+  .planet__theme {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(22 * 100vw / 375);
+    padding-top: calc(6 * 100vw / 375);
+  }
+}
+
+/* SUBSCRIBE ============================================ */
+.subscribe {
+  position: relative;
+}
+.subscribe__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: calc(317 * 100vw / 1441);
+  position: relative;
+}
+.subscribe__block {
+  width: calc(652 * 100vw / 1441);
+}
+.subscribe__image {
+  background-image: url(/img/subscribe/image.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(616 * 100vw / 1441);
+  height: calc(838 * 100vw / 1441);
+}
+.subscribe__decor-stars {
+  background-image: url(/img/subscribe/decor-stars.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(524 * 100vw / 1441);
+  height: calc(305 * 100vw / 1441);
+  top: calc(280 * 100vw / 1441);
+  left: calc(350 * 100vw / 1441);
+  z-index: -2;
+}
+.subscribe__decor-rocket {
+  background-image: url(/img/subscribe/decor-rocket.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(456 * 100vw / 1441);
+  height: calc(305 * 100vw / 1441);
+  top: calc(680 * 100vw / 1441);
+  left: calc(-100 * 100vw / 1441);
+}
+.subscribe__form {
+  position: absolute;
+  bottom: calc(-217 * 100vw / 1441);
+  left: calc(154 * 100vw / 1441);
+  width: calc(1129 * 100vw / 1441);
+  height: calc(435 * 100vw / 1441);
+  border-radius: calc(40 * 100vw / 1441);
+  background-color: #0C033A;
+  overflow: hidden;
+}
+.form__block {
+  height: 100%;
+  background: linear-gradient(100.13deg, #6F26BB -32.91%, rgba(111, 38, 187, 0) 160.1%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.form__title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: calc(60 * 100vw / 1441);
+  width: calc(671 * 100vw / 1441);
+  padding-bottom: calc(33 * 100vw / 1441);
+  padding-top: calc(103 * 100vw / 1441);
+  text-align: center;
+}
+.form__block-input {
+  display: flex;
+  justify-content: center;
+  padding-bottom: calc(104 * 100vw / 1441);
+}
+.form__input {
+  width: calc(381 * 100vw / 1441);
+  height: calc(69 * 100vw / 1441);
+  background-color: #3E0174;
+  border: solid calc(2 * 100vw / 1441) #3A036A;
+  border-radius: calc(35 * 100vw / 1441) 0 0 calc(35 * 100vw / 1441);
+  border-right: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(18 * 100vw / 1441);
+  font-weight: 400;
+  padding-left: calc(42 * 100vw / 1441);
+}
+.form__button {
+  width: calc(166 * 100vw / 1441);
+  height: calc(69 * 100vw / 1441);
+  background: linear-gradient(99.41deg, #FFB018 -12.63%, #FF2900 84.78%);
+  border: solid calc(2 * 100vw / 1441) #3A036A;
+  border-radius: 0 calc(35 * 100vw / 1441) calc(35 * 100vw / 1441) 0;
+  border-left: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(18 * 100vw / 1441);
+  font-weight: 400;
+}
+.form__decor-rocketstart {
+  position: absolute;
+  background-image: url(/img/subscribe/decor-rocketstart.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(752 * 100vw / 1441);
+  height: calc(710 * 100vw / 1441);
+  top: calc(-40 * 100vw / 1441);
+  left: calc(-260 * 100vw / 1441);
+}
+
+@media (max-width : 767px) {
+  .subscribe__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+  .subscribe__block {
+    width: 100%;
+    padding-bottom: calc(50 * 100vw / 375);
+  }
+  .subscribe__image {
+    display: none;
+  }
+  .subscribe__decor-stars {
+    width: calc(524 * 100vw / 375);
+    height: calc(305 * 100vw / 375);
+    top: calc(80 * 100vw / 375);
+    left: calc(-90 * 100vw / 375);
+  }
+  .subscribe__decor-rocket {
+    display: none;
+  }
+  .subscribe__form {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: calc(40 * 100vw / 375);
+    background-color: #0C033A;
+    overflow: hidden;
+  }
+  .form__title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: calc(30 * 100vw / 375);
+    width: 100%;
+    padding: calc(20 * 100vw / 375);
+    text-align: center;
+  }
+  .form__block-input {
+    display: flex;
+    justify-content: center;
+    padding: 0 calc(20 * 100vw / 375) calc(20 * 100vw / 375) calc(20 * 100vw / 375);
+    width: 100%;
+  }
+  .form__input {
+    width: 70%;
+    height: calc(60 * 100vw / 375);
+    border: solid calc(2 * 100vw / 375) #3A036A;
+    border-radius: calc(30 * 100vw / 375) 0 0 calc(30 * 100vw / 375);
+    font-size: calc(15 * 100vw / 375);
+    padding-left: calc(15 * 100vw /375);
+  }
+  .form__button {
+    width: 30%;;
+    height: calc(60 * 100vw / 375);
+    border: solid calc(2 * 100vw / 375) #3A036A;
+    border-radius: 0 calc(30 * 100vw / 375) calc(30 * 100vw / 375) 0;
+    font-size: calc(15 * 100vw / 375);
+  }
+  .form__decor-rocketstart {
+    display: none;
+  }
+}
+
+/* FOOTER ============================================= */
+.footer {
+  height: calc(779 * 100vw / 1441);
+  background: linear-gradient(180deg, #4A188C -66.69%, #3E0174 -48.93%, #0C003D 66.62%);
+}
+.footer__container {
+  padding-top: calc(394 * 100vw / 1441);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer__container-last {
+  padding-top: calc(50 * 100vw / 1441);
+}
+.footer__logo {
+  width: 33%;
+}
+.logo__image {
+  width: calc(193 * 100vw / 1441);
+  height: calc(59 * 100vw / 1441);
+}
+.navlist {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+}
+.navlist__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: calc(20 * 100vw / 1441);
+  padding-bottom: calc(25 * 100vw / 1441);
+}
+.navlist__item {
+  font-family: 'Inter', sans-serif;
+  font-size: calc(16 * 100vw / 1441);
+  padding-bottom: calc(16 * 100vw / 1441);
+  color: white;
+}
+.footer__social {
+  width: 14%;
+}
+.social__header {
+  font-family: 'Inter', sans-serif;
+  font-size: calc(20 * 100vw / 1441);
+  font-weight: bold;
+  padding-bottom: calc(30 * 100vw / 1441);
+}
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+}
+.icons__icon {
+  width: 27%;
+}
+.footer__copiright {
+  width: 100%;
+  border-top: solid calc(2 * 100vw / 1441) #330F6F;
+}
+
+@media (max-width : 767px) {
+  .footer {
+    height: auto;
+  }
+  .footer__container {
+    padding-top: calc(50 * 100vw / 375);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__container-last {
+    padding-top: calc(50 * 100vw / 375);
+  }
+  .footer__logo {
+    width: 50%;
+    padding-bottom: calc(25 * 100vw / 375)
+  }
+  .logo__image {
+    width: 100%;
+    height: 100%;
+  }
+  .navlist {
+    width: 100%;
+    padding: calc(10 * 100vw / 375)
+  }
+  .navlist__header {
+    font-size: calc(20 * 100vw / 375);
+    padding-bottom: calc(10 * 100vw / 375);
+  }
+  .navlist__item {
+    text-align: center;
+    font-size: calc(16 * 100vw / 375);
+    padding-bottom: calc(5 * 100vw / 375);
+  }
+  .footer__social {
+    width: 50%;
+  }
+  .social__header {
+    font-size: calc(20 * 100vw / 375);
+    padding-bottom: calc(20 * 100vw / 375);
+  }
+  .social__icons {
+    height: calc(40 * 100vw / 375);
+  }
+  .icons__icon {
+    width: 30%;
+  }
+  .footer__copiright {
+    width: 100%;
+    border-top: solid calc(2 * 100vw / 375) #330F6F;
+    padding-bottom: calc(50 * 100vw / 375);
+  }
+}
